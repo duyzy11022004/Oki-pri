@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  chainlens:
+    image: web3labs/chainlens:latest
+    container_name: chainlens
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      NETWORK_NAME: "My-IBFT-Network"
+      CHAIN_ID: "1337"
+      RPC_HTTP_URL: "http://127.0.0.1:8545"
